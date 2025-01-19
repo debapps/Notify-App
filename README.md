@@ -16,7 +16,7 @@ The application notifies important occasions, events to intended group of recipi
 
 -   **markdown**
 -   **pandas**
--   **dotenv**
+-   **python-dotenv**
 
 To install all dependencies use following command.
 
