@@ -1,6 +1,6 @@
 # Notify Application
 
-The application notifies important occations, events to intended group of recipients on the very date through email messages. It works in following way:
+The application notifies important occasions, events to intended group of recipients on the very date through email messages. It works in following way:
 
 -   Read a Google spreadsheet to get the list of specified event and event dates.
 -   if current date matches with the any of the event dates, it triggers the email notification.
