@@ -2,6 +2,7 @@
 
 The application notifies important occasions, events to intended group of recipients on the very date through email messages. It works in following way:
 
+-   Sends Good Morning email with a funny quote and image everyday.
 -   Read a Google spreadsheet to get the list of specified event and event dates.
 -   if current date matches with the any of the event dates, it triggers the email notification.
 -   The group of email recipients and email subject and message body are fetched from the Google spreadsheet.
