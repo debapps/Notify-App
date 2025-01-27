@@ -6,12 +6,15 @@ from email_notification import EmailNotify
 from quote_news import generate_quote, generate_news_HTML
 from daily_mail import DailyEmail
 
+# Default To email list.
+TO_EMAIL = ['debaditya.bhar@gmail.com', 'debadityabhar@icloud.com']
+
 def main():
     
     # Sends Daily quotes email.
     daily = DailyEmail(generate_quote(), generate_news_HTML())
     today_email = daily.get_email()
-    today_send_mail = EmailNotify(to_emails=['debaditya.bhar@outlook.com'], subject=today_email[0],
+    today_send_mail = EmailNotify(to_emails=TO_EMAIL, subject=today_email[0],
                                   content=today_email[1], is_html=True)
     today_send_mail.send_email()
 
