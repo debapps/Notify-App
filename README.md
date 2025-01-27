@@ -13,6 +13,10 @@ The application notifies important occasions, events to intended group of recipi
 
 1. **APP_PASS_CODE** - The passcode for the sender email address.
 2. **GOOGLE_SHEET_URL** - The Google Sheet URL for sheety API.
+3. **QUOTE_API_URL** - The URL for the Quote API (https://api.kanye.rest/)
+4. **IMG_URL** - The URL for the Image API (picsum photos)
+5. **NEWS_API_URL** - The URL for the News API (https://newsapi.org/v2/everything)
+6. **NEWS_API_KEY** - The API key for the News API.
 
 ## External Python Packages used
 
