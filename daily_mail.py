@@ -11,7 +11,7 @@ class DailyEmail:
 
     def __init__(self, quote, news):
         subject = 'Greetings for the day...' 
-        with open(os.path.join('email_content', 'daily_email.html'), 'r') as content_file:
+        with open('daily_email.html', 'r') as content_file:
             raw_content = content_file.read()
             content = raw_content.format(image_var = DailyEmail.IMAGE, 
                                          quote_var = quote,
