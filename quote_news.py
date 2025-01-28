@@ -55,7 +55,7 @@ def generate_news_HTML():
         } for news in data['articles']]
     
     # Get the HTML News template.
-    with open('news_template.html', 'r') as news_temp_file:
+    with open(os.path.join('emails', 'news_temp.html'), 'r') as news_temp_file:
         news_temp = news_temp_file.read()
 
     # Generate News content.
