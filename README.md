@@ -17,6 +17,7 @@ The application notifies important occasions, events to intended group of recipi
 4. **IMG_URL** - The URL for the Image API (picsum photos)
 5. **NEWS_API_URL** - The URL for the News API (https://newsapi.org/v2/everything)
 6. **NEWS_API_KEY** - The API key for the News API.
+7. **ABS_PATH** - The Absulute path of the email template folder.
 
 ## External Python Packages used
 
