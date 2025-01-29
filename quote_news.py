@@ -8,16 +8,23 @@ from dotenv import load_dotenv
 # Load the environment file.
 load_dotenv()
 
-# Get the environment variables.
+# Get the environment variables and constants.
 QUOTE_URL = os.getenv('QUOTE_API_URL')
 NEWS_URL = os.getenv('NEWS_API_URL')
 NEWS_KEY = os.getenv('NEWS_API_KEY')
+NEWS_TOPIC = os.getenv('NEWS_TOPIC')
+
+def get_api_call(url, params = None):
+    '''This function returns get api call results.'''
+    res = requests.get(url, params)
+    res.raise_for_status()
+    data = res.json()
+    return data
 
 def generate_quote():
     '''This Function generates random quotes.'''
-    res = requests.get(QUOTE_URL)
-    res.raise_for_status()
-    data = res.json()
+
+    data = get_api_call(QUOTE_URL)
     return data['quote']
 
 def get_prev_date():
@@ -34,7 +41,7 @@ def get_prev_date():
 def generate_news_HTML():
     '''This Function generates the News content.'''
     parameters = {
-        'q': 'science',
+        'q': NEWS_TOPIC,
         'language': 'en',
         'sortBy': 'popularity',
         'pageSize': '5',
@@ -43,9 +50,9 @@ def generate_news_HTML():
     }
 
     # Get the News items from API.
-    res = requests.get(NEWS_URL, params=parameters)
-    res.raise_for_status()
-    data = res.json()
+    data = get_api_call(NEWS_URL, params=parameters)
+
+    # Format News Data
     news_articles = [{
         "title": news['title'], 
         "desc": news['description'],
